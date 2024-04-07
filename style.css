@@ -196,7 +196,7 @@ nav div ul {
     color: var(--dark-grey);
     overflow: hidden;
     position: relative;
-    max-width: 90%;
+    max-width: 85%;
     margin: 0 auto 1.8em;
 }
 .service-card--padding {
@@ -247,7 +247,6 @@ nav div ul {
 }
 
 /* ---- Contacts/Book ---- */
-
 .contact__title {
     font-family: 'Yeseva One', serif;
     font-size: 1.6rem;
@@ -258,7 +257,6 @@ nav div ul {
     display: grid;
     grid-template-columns: 25px auto;
     gap: 10px;
-
 }
 
 /* ---- FAQs ---- */
@@ -292,24 +290,33 @@ nav div ul {
     font-style: italic;
 }
 
+@media (min-width: 570px) {
+    .service__flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
 
-@media (min-width: 550px) {
+    }
     .service-card {
         width: 100%;
+        flex-grow: 0;
+        min-width: 280px;
+        max-width: 330px;
     }
     .service-card__text {
         display:inline-block;  
     }
-    .service__flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+}
+@media (min-width: 850px) {
+    .container {
+        max-width: 800px;
     }
-
+    .flex-desktop {
+        display: flex;
+        gap: 50px;
+    }
+    
 }
 
-/* for later */ 
-header {
-    /* min-height: 250px; */
-}
 
