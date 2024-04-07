@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400&family=Sacramento&family=Yeseva+One&display=swap');
+/* font-family: 'Karla', sans-serif;
+font-family: 'Sacramento', cursive;
+font-family: 'Yeseva One', serif; */
+
+/* Resets */ 
+ /* Box sizing rules */
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+ 
+ /* Remove default margin */
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ p,
+ figure,
+ blockquote,
+ dl,
+ dd {
+   margin: 0;
+ }
+ 
+ /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ ul,
+ ol {
+   list-style: none;
+ }
+ 
+ /* Set core root defaults */
+ html:focus-within {
+   scroll-behavior: smooth;
+ }
+
+ /* Set core body defaults */
+ body {
+   min-height: 100vh;
+   text-rendering: optimizeSpeed;
+   line-height: 1.5;
+   font-family: "Karla", sans-serif;
+ }
+
+ /* Removing hyperlinks default styling */
+ a {
+   color: inherit;
+   text-decoration: inherit;
+ }
+
+ /* Make images easier to work with */
+ img,
+ picture {
+   max-width: 100%;
+   display: block;
+ }
+
+ /* Inherit fonts for inputs and buttons */
+ input,
+ button,
+ textarea,
+ select {
+   font: inherit;
+ }
+
+ /* ---- Styling ---- */
+
+html {
+    font-size: 16px;
+}
+
+/* General Reusable components */ 
+
+:root {
+    --dark-text: black;
+    --light-text:white;
+    --dark-grey: #232222;
+    --dark-purple: #2f0157;
+    --light-grey-img: #BCB8B8;
+    --light-grey-text: #5c5b5b; /* not in use? */
+    --light-bg: white;
+  }
+
+.white-bg {
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    width: 100%;
+}
+.purple-bg {
+    color: var(--light-text);
+    background-color: var(--dark-purple);
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 3rem 0;
+    max-width: 85%;
+}
+
+.flex {
+    display: flex;
+}
+
+
+ /* ---- Styling starts here / General / Mobile first ---- */
+h1 {
+    font-family: "Yeseva One", serif;
+    font-weight: lighter;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    text-align: center;
+}
+h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.3rem;
+    font-weight: lighter;   /* Add a line height?? See smaller screens and FAQ */ 
+}
+h3 {
+    font-family: 'Yeseva One', serif;
+}
+
+/* ---- Header  ---- */
+
+.header__title {
+    position: relative;
+}
+
+.header__subtitle {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.header__bg-img {
+    display: none;
+}
+.header__logo {
+    margin: 0 auto;
+    max-width: 60px;
+}
+
+
+/* ---- Navigation - Sticky - with exceptions of margins and paddings  ---- */
+#nav {
+    padding: 5px 0;
+    background-color: #20013a;;
+    box-shadow: 0px 1px 4px var(--light-grey-text);
+}
+
+nav div.flex {
+    justify-content: center;
+}
+nav div.container {
+    padding: 0;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav div ul {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    gap: 18px;
+}
+
+.flex-center {
+    margin: 0 auto;
+}
+ nav div ul li span {
+    color: var(--light-grey-text);
+ }
+
+/* ---- About  ---- */
+
+.about__text {
+    margin: 0 0 1.5em;
+    font-size: 1.1rem;
+}
+.about__photo {
+    margin: 2rem auto;
+    max-width: 300px;
+}
+
+/* ---- Services  ---- */
+.service-card {
+    background-color: var(--light-bg);
+    border-radius: 20px;
+    color: var(--dark-grey);
+    overflow: hidden;
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto 1.8em;
+}
+.service-card--padding {
+    padding: 1.2em;
+}
+.service-card__bg {
+    position: absolute;
+    min-width: 120%;
+    opacity: 0.85;
+}
+.service-card__title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--dark-text);
+}
+.service-card__title span {
+    text-transform: none;
+    font-size: 1.2rem;
+    font-style: italic;
+
+}
+.service-card__subtitle {
+    color: var(--dark-grey);
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.2;
+    margin-top: 0.7em;
+}
+
+.service-card__text {
+    color: var(--dark-grey);
+    font-size: 1rem;
+    margin-top: 0.5em;
+    display: none;  
+    /* for smallest display - makes the serivces section really long to scroll through*/
+}
+.service-card__aside {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.service-card__tag {
+    background-color: var(--dark-purple);
+    color: var(--light-text);
+    padding: 0.3em 0.6em;
+    border-radius: 10px;
+    min-width:  fit-content;
+}
+
+/* ---- Contacts/Book ---- */
+
+.contact__title {
+    font-family: 'Yeseva One', serif;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+.grid_contacts {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 25px auto;
+    gap: 10px;
+
+}
+
+/* ---- FAQs ---- */
+.faq__question {
+    margin: 1em 0;
+}
+.faq__qanswer {
+    font-size: 1.1rem;
+}
+
+
+/* ---- Footer ---- */
+
+#footer .container {
+    padding-top: 1em;
+    color: var(--light-grey-text);
+}
+
+.footer__copyright {
+    text-align: center;
+    font-size: 0.85rem;
+}
+.footer__note span {
+    font-size: 0.90rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.footer__note {
+    margin: 1em 0 0; 
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+
+@media (min-width: 550px) {
+    .service-card {
+        width: 100%;
+    }
+    .service-card__text {
+        display:inline-block;  
+    }
+    .service__flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+}
+
+/* for later */ 
+header {
+    /* min-height: 250px; */
+}
+
