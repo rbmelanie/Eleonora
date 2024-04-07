@@ -208,19 +208,19 @@ nav div ul {
     opacity: 0.85;
 }
 .service-card__title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: var(--dark-text);
 }
 .service-card__title span {
     text-transform: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-style: italic;
 
 }
 .service-card__subtitle {
     color: var(--dark-grey);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-style: italic;
     line-height: 1.2;
     margin-top: 0.7em;
@@ -228,7 +228,7 @@ nav div ul {
 
 .service-card__text {
     color: var(--dark-grey);
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 0.5em;
     display: none;  
     /* for smallest display - makes the serivces section really long to scroll through*/
@@ -250,7 +250,7 @@ nav div ul {
 
 .contact__title {
     font-family: 'Yeseva One', serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.2;
 }
 .grid_contacts {
